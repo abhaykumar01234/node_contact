@@ -8,7 +8,7 @@ GET {{BASE_URL}}/api/contacts
 
 ###
 
-GET {{BASE_URL}}/api/contacts/mango?name=ankit&age=31
+GET {{BASE_URL}}/api/contacts/f0db021e-2bcd-47dd-8ca0-f064803421c2
 
 ###
 
@@ -16,8 +16,10 @@ POST {{BASE_URL}}/api/contacts
 Content-Type: application/json
 
 {
-    "name": "Ankit",
-    "age": 32
+    "name": "Ajay Kumar",
+    "email": "ajay@gmail.com",
+    "phone": "8218150662",
+    "type": "PROFESSIONAL"
 }
 
 ###
@@ -33,3 +35,7 @@ Content-Type: application/json
 ###
 
 GET {{BASE_URL}}/try/abhay
+
+###
+
+DELETE {{BASE_URL}}/api/contacts/545310dc-58f2-442d-98e8-9eeecf5fa980

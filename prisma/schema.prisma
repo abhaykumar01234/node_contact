@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum CONTACT_TYPE {
+  PERSONAL
+  PROFESSIONAL
+}
+
+model Contact {
+  id        String       @id @default(uuid())
+  name      String       @db.VarChar(100)
+  email     String
+  type      CONTACT_TYPE @default(PERSONAL)
+  phone     String
+  createdAt DateTime     @default(now())
+}

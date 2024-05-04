@@ -1,0 +1,14 @@
+-- CreateEnum
+CREATE TYPE "CONTACT_TYPE" AS ENUM ('PERSONAL', 'PROFESSIONAL');
+
+-- CreateTable
+CREATE TABLE "Contact" (
+    "id" TEXT NOT NULL,
+    "name" VARCHAR(100) NOT NULL,
+    "email" TEXT NOT NULL,
+    "type" "CONTACT_TYPE" NOT NULL DEFAULT 'PERSONAL',
+    "phone" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "Contact_pkey" PRIMARY KEY ("id")
+);
