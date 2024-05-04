@@ -1,0 +1,35 @@
+@BASE_URL=http://localhost:3001
+
+GET {{BASE_URL}}
+
+###
+
+GET {{BASE_URL}}/api/contacts
+
+###
+
+GET {{BASE_URL}}/api/contacts/mango?name=ankit&age=31
+
+###
+
+POST {{BASE_URL}}/api/contacts
+Content-Type: application/json
+
+{
+    "name": "Ankit",
+    "age": 32
+}
+
+###
+
+PUT {{BASE_URL}}/api/contacts/apnaID
+Content-Type: application/json
+
+{
+    "name": "Ankit",
+    "age": 32
+}
+
+###
+
+GET {{BASE_URL}}/try/abhay
